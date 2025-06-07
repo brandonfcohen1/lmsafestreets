@@ -10,7 +10,7 @@ export default function Index() {
   const morePosts = allPosts.slice(1);
 
   return (
-    <main>
+    <main className="min-h-screen">
       <div className="relative h-[600px] w-full">
         <StreetsMap />
         <div className="absolute inset-0 pointer-events-none">
@@ -20,12 +20,14 @@ export default function Index() {
         </div>
       </div>
       <Container>
-        <AboutUs
-          title="About LM Safe Streets"
-          excerpt="We are a community organization dedicated to making our streets safer and more accessible for everyone. Learn more about our mission and how you can get involved."
-          slug="about"
-        />
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+        <div className="py-16 md:py-24">
+          <AboutUs
+            title="About LM Safe Streets"
+            excerpt="We are a community organization dedicated to making our streets safer and more accessible for everyone. Learn more about our mission and how you can get involved."
+            slug="about"
+          />
+          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+        </div>
       </Container>
     </main>
   );
