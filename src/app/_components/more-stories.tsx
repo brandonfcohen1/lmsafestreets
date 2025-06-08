@@ -9,7 +9,7 @@ export function MoreStories({ posts }: Props) {
   return (
     <section>
       <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-8">
-        More Stories
+        Read More
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-8 lg:gap-x-12 gap-y-12 md:gap-y-16">
         {posts.map((post) => (
